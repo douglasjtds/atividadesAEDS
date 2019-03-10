@@ -41,7 +41,7 @@ namespace projeto1
                         atividade3();
                         break;
                     case 4:
-                        //atividade4();
+                        atividade4();
                         break;
                     case 5:
                         //atividade5();
@@ -132,6 +132,37 @@ namespace projeto1
             }
         }
         #endregion
+
+        #region [Atividade 4]
+        /// <summary>
+        /// Atividade 4: Escreva um programa que receba dez números do usuário e armazene em um vetor a metade de cada número.
+        /// Após isso, o programa deve imprimir todos os valores armazenados.
+        /// </summary>
+        public static void atividade4()
+        {
+            Console.Clear();
+            Console.Write("[Atividade 4]");
+            Console.WriteLine("\n");
+
+            double[] numerosUsuario = new double[10];
+            double metade = 0;
+            int count = 1;
+            for (int i = 0; i < numerosUsuario.Length; i++)
+            {
+                System.Console.WriteLine("Digite o {0}º número: ", count);
+                numerosUsuario[i] = Int32.Parse(Console.ReadLine());
+                count++;
+                metade = numerosUsuario[i] / 2;
+                System.Console.WriteLine("Metade: {0}", metade);
+                Console.WriteLine("\n");
+            }
+        }
+        #endregion
+
+        #endregion
+
+        #region ----Matrizes----
+
 
         #endregion
 
