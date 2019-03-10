@@ -21,14 +21,15 @@ número. Após isso, o programa deve imprimir todos os valores armazenados.
 
 ## Atividade 5
 Escreva um programa que entre com valores para uma matriz M(5x5) e imprima a matriz final, como exemplo mostrado abaixo:
-<p>
+
 | 1  | 2  | 3  | 4  | 5  |
 |----|----|----|----|----|
 | 6  | 7  | 8  | 9  | 10 |
 | 11 | 12 | 13 | 14 | 15 |
 | 16 | 17 | 18 | 19 | 20 |
 | 21 | 22 | 23 | 24 | 25 |
-</p>
+
+
 
 ## Atividade 6
 Entrar com valores inteiros para um matriz A(4x4) e para uma matriz B(4x4). Gerar e imprimir uma outra matriz com a SOMA (A+B).
