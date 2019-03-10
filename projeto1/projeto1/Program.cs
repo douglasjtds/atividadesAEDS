@@ -50,7 +50,7 @@ namespace projeto1
                         atividade6();
                         break;
                     case 7:
-                        //atividade7();
+                        atividade7();
                         break;
                     default:
                         saiPrograma();
@@ -268,12 +268,71 @@ namespace projeto1
         }
         #endregion
 
+        #region [Atividade 7]
+        /// <summary>
+        /// Atividade 7: Criar um programa que carregue uma matriz 12 x 4 com os valores das vendas de uma loja, 
+        /// em que cada linha represente um mês do ano, e cada coluna, uma semana do mês. 
+        /// </summary>
+        /// Para fins de simplificação considere que cada mês possui somente 4 semanas. Calcule e imprima: 
+        /// - Total vendido em cada mês do ano; 
+        /// - Total vendido em cada semana durante todo o ano; 
+        /// - Total vendido no ano.
+        public static void atividade7()
+        {
+            Console.Clear();
+            Console.Write("[Atividade 7]");
+            Console.WriteLine("\n");
+
+            int linhas = 12;
+            int colunas = 4;
+            int[,] matrizVendas = new int[linhas, colunas];
+            int totalGeral = 0;
+            for (int i = 0; i < linhas; i++)
+            {
+                int totalMes = 0;
+                for (int j = 0; j < colunas; j++)
+                {
+                    System.Console.WriteLine("Entre com o valor da venda da semana (linha, coluna): ({0},{1})", i, j);
+                    matrizVendas[i, j] = Int32.Parse(Console.ReadLine());
+                    //matrizVendas[i, j] = i;
+                    totalMes = totalMes + matrizVendas[i, j]; // - Total vendido em cada mês do ano;
+                    totalGeral = totalGeral + matrizVendas[i, j];
+                }
+                //Console.WriteLine("Total vendido em cada mês do ano: ");
+                Console.WriteLine("\n");
+                Console.WriteLine("Total vendido no mês {0} foi de R$ {1}", i + 1, totalMes);
+                Console.WriteLine("\n");
+            }
+
+
+            // - Total vendido em cada semana durante todo o ano; 
+            Console.WriteLine("Total vendido em cada semana durante todo o ano: ");
+            Console.WriteLine("\n");
+            for (int i = 0; i < linhas; i++)
+            {
+                for (int j = 0; j < colunas; j++)
+                {
+                    Console.Write("    {0}", matrizVendas[i, j]);
+                }
+                Console.WriteLine("\n");
+
+            }
+
+            // - Total vendido no ano.
+            Console.WriteLine("Total vendido em todo o ano foi de: R$ {0}", totalGeral);
+
+        }
         #endregion
+
+        #endregion
+
+        #region para fechar o programa
 
         private static void saiPrograma()
         {
             Console.WriteLine();
             Console.WriteLine("Você saiu do programa. Clique qualquer tecla para fechar...");
-        }
+        } 
+        #endregion
     }
 }
