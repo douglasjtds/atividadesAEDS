@@ -44,10 +44,10 @@ namespace projeto1
                         atividade4();
                         break;
                     case 5:
-                        //atividade5();
+                        atividade5();
                         break;
                     case 6:
-                        //atividade6();
+                        atividade6();
                         break;
                     case 7:
                         //atividade7();
@@ -163,6 +163,110 @@ namespace projeto1
 
         #region ----Matrizes----
 
+        #region [Atividade 5]
+        /// <summary>
+        /// Atividade 5: Escreva um programa que entre com valores para uma matriz M(5x5) e imprima a matriz final, 
+        /// como exemplo mostrado abaixo:
+        /// </summary>
+        /// 1  2  3  4  5
+        /// 6  7  8  9  10
+        /// 11 12 13 14 15
+        /// 16 17 18 19 20
+        /// 21 22 23 24 25
+        public static void atividade5()
+        {
+            Console.Clear();
+            Console.Write("[Atividade 5]");
+            Console.WriteLine("\n");
+
+            int linhas = 5;
+            int colunas = 5;
+            int i, j;
+            int[,] matriz = new int[linhas, colunas];
+            for (i = 0; i < linhas; i++)
+            {
+                for (j = 0; j < colunas; j++)
+                {
+                    Console.WriteLine("Entre com o valor para a matriz na posição (linha, coluna): ({0},{1})", i, j);
+                    matriz[i, j] = Int32.Parse(Console.ReadLine());
+                    //matriz[i, j] = i;
+                }
+            }
+            Console.Write("-------------------------------------");
+            Console.WriteLine("\n");
+            Console.Write("A matriz gerada foi: ");
+            Console.WriteLine("\n");
+            // Console.WriteLine(matriz[i, j]);
+            // ---------------- OUTRO FOR PRA IMPRIMIR ----------------
+            for (i = 0; i < linhas; i++)
+            {
+                for (j = 0; j < colunas; j++)
+                {
+                    Console.Write("    {0}", matriz[i, j]);
+                }
+                Console.Write("\n");
+            }
+        }
+        #endregion
+
+        #region [Atividade 6]
+        /// <summary>
+        /// Atividade 6: Entrar com valores inteiros para um matriz A(4x4) e para uma matriz B(4x4). 
+        /// Gerar e imprimir uma outra matriz com a SOMA(A+B).
+        /// </summary>
+        public static void atividade6()
+        {
+            Console.Clear();
+            Console.Write("[Atividade 6]");
+            Console.WriteLine("\n");
+
+            int linhas = 4;
+            int colunas = 4;
+            int[,] matrizA = new int[linhas, colunas];
+            int[,] matrizB = new int[linhas, colunas];
+            int[,] matrizAB = new int[linhas, colunas];
+            int i, j;
+
+            //preenche a matriz A e já passa o valor pra matrizAB
+            for (i = 0; i < linhas; i++)
+            {
+                for (j = 0; j < colunas; j++)
+                {
+                    System.Console.WriteLine("Entre com o valor para a matriz A na posição (linha, coluna): ({0},{1})", i, j);
+                    //matrizA[i, j] = Int32.Parse(Console.ReadLine());
+                    matrizA[i, j] = i;
+                    matrizAB[i, j] = matrizA[i, j];
+                }
+            }
+
+            //preenche a matriz B e já soma com o que tá na matrizAB
+            for (i = 0; i < linhas; i++)
+            {
+                for (j = 0; j < colunas; j++)
+                {
+                    System.Console.WriteLine("Entre com o valor para a matriz B na posição (linha, coluna): ({0},{1})", i, j);
+                    //matrizB[i, j] = Int32.Parse(Console.ReadLine());
+                    matrizB[i, j] = i;
+                    matrizAB[i, j] += matrizB[i, j];
+                }
+            }
+            //matrizAB[i, j] = matrizA[i, j] + matrizB[i, j]; // acho que esse cálculo não pode ser feito externamente
+
+            //imprime a matrizAB
+            Console.Write("-------------------------------------");
+            Console.WriteLine("\n");
+            Console.Write("A matriz SOMA é: ");
+            Console.WriteLine("\n");
+            for (i = 0; i < linhas; i++)
+            {
+                for (j = 0; j < colunas; i++)
+                {
+                    Console.Write("    {0}", matrizAB[i, j]);
+                }
+                Console.WriteLine("\n");
+            }
+        }
+        #endregion
 
         #endregion
 
