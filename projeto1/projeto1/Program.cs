@@ -35,10 +35,10 @@ namespace projeto1
                         atividade1();
                         break;
                     case 2:
-                        //atividade2();
+                        atividade2();
                         break;
                     case 3:
-                        //atividade3();
+                        atividade3();
                         break;
                     case 4:
                         //atividade4();
@@ -81,6 +81,54 @@ namespace projeto1
             {
                 vetor1[i] = i;
                 System.Console.WriteLine(vetor1[i]);
+            }
+        }
+        #endregion
+
+        #region [Atividade 2]
+        /// <summary>
+        /// Atividade 2: Escreva um programa que armazene em um vetor todos os números pares do intervalo fechado de 1 a 100. 
+        /// Após isso, o programa deve imprimir todos os valores armazenados.
+        /// </summary>
+        private static void atividade2()
+        {
+            Console.Clear();
+            Console.Write("[Atividade 2]");
+            Console.WriteLine("\n");
+
+            int[] vetor2 = new int[101];
+            for (int i = 1; i < vetor2.Length; i++)
+            {
+                if (i % 2 == 0 && i > 0)
+                {
+                    vetor2[i] = i;
+                    System.Console.WriteLine(vetor2[i]);
+                }
+            }
+        }
+        #endregion
+
+        #region [Atividade 3]
+        /// <summary>
+        /// Atividade 3: Escreva um programa que armazene em um vetor os 100 primeiros números ímpares. 
+        /// Após isso, o programa deve imprimir todos os valores armazenados.
+        /// </summary>
+        private static void atividade3()
+        {
+            Console.Clear();
+            Console.Write("[Atividade 3]");
+            Console.WriteLine("\n");
+
+            int count = 1;
+            int[] vetorDeImpares = new int[200];
+            for (int i = 0; i <= vetorDeImpares.Length; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    vetorDeImpares[i] = i;
+                    Console.WriteLine("{0}º número ímpar: {1}", count, vetorDeImpares[i]);
+                    count++;
+                }
             }
         }
         #endregion
