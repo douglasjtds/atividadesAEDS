@@ -220,33 +220,35 @@ namespace projeto1
             Console.Write("[Atividade 6]");
             Console.WriteLine("\n");
 
-            int linhas = 4;
-            int colunas = 4;
-            int[,] matrizA = new int[linhas, colunas];
-            int[,] matrizB = new int[linhas, colunas];
-            int[,] matrizAB = new int[linhas, colunas];
-            int i, j;
+            int linhas = 3;
+            int colunas = 3;
+            int[,] matrizA = new int[4, 4];
+            int[,] matrizB = new int[4, 4];
+            int[,] matrizAB = new int[4, 4];
+            // int i, j;
 
             //preenche a matriz A e já passa o valor pra matrizAB
-            for (i = 0; i < linhas; i++)
+            for (int i = 0; i <= linhas; i++)
             {
-                for (j = 0; j < colunas; j++)
+                for (int j = 0; j <= colunas; j++)
                 {
-                    System.Console.WriteLine("Entre com o valor para a matriz A na posição (linha, coluna): ({0},{1})", i, j);
-                    //matrizA[i, j] = Int32.Parse(Console.ReadLine());
-                    matrizA[i, j] = i;
+                    Console.Clear();
+                    Console.WriteLine("Entre com o valor para a matriz A na posição (linha, coluna): ({0},{1})", i, j);
+                    matrizA[i, j] = Int32.Parse(Console.ReadLine());
+                    //matrizA[i, j] = i;
                     matrizAB[i, j] = matrizA[i, j];
                 }
             }
 
             //preenche a matriz B e já soma com o que tá na matrizAB
-            for (i = 0; i < linhas; i++)
+            for (int i = 0; i <= linhas; i++)
             {
-                for (j = 0; j < colunas; j++)
+                for (int j = 0; j <= colunas; j++)
                 {
-                    System.Console.WriteLine("Entre com o valor para a matriz B na posição (linha, coluna): ({0},{1})", i, j);
-                    //matrizB[i, j] = Int32.Parse(Console.ReadLine());
-                    matrizB[i, j] = i;
+                    Console.Clear();
+                    Console.WriteLine("Entre com o valor para a matriz B na posição (linha, coluna): ({0},{1})", i, j);
+                    matrizB[i, j] = Int32.Parse(Console.ReadLine());
+                    //matrizB[i, j] = i;
                     matrizAB[i, j] += matrizB[i, j];
                 }
             }
@@ -257,9 +259,9 @@ namespace projeto1
             Console.WriteLine("\n");
             Console.Write("A matriz SOMA é: ");
             Console.WriteLine("\n");
-            for (i = 0; i < linhas; i++)
+            for (int i = 0; i <= linhas; i++)
             {
-                for (j = 0; j < colunas; i++)
+                for (int j = 0; j <= colunas; j++)
                 {
                     Console.Write("    {0}", matrizAB[i, j]);
                 }
